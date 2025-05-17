@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spa</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex Explorer</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pokédex Explorer</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Zoek een Pokémon..." />
+      <select id="filter-type">
+        <option value="">Alle types</option>
+      </select>
+      <select id="sort">
+        <option value="name">Sorteer op naam</option>
+        <option value="weight">Sorteer op gewicht</option>
+      </select>
+      <button id="toggle-theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="pokemon-list" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pokédex Explorer</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
