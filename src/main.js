@@ -1,24 +1,32 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { fetchPokemonList, fetchPokemonTypes } from './api.js';
+import { renderPokemonList, populateTypeFilter } from './ui.js';
+import { saveThemePreference, loadThemePreference, toggleTheme } from './storage.js';
+import { applyFilters } from './filters.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const searchInput = document.getElementById('search');
+const typeFilter = document.getElementById('filter-type');
+const sortSelect = document.getElementById('sort');
+const themeToggle = document.getElementById('toggle-theme');
 
-setupCounter(document.querySelector('#counter'))
+let allPokemon = [];
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+  document.body.classList.toggle('dark-theme', loadThemePreference());
+
+  allPokemon = await fetchPokemonList();
+  const types = await fetchPokemonTypes();
+
+  renderPokemonList(allPokemon);
+  populateTypeFilter(types);
+});
+
+
+searchInput.addEventListener('input', () => applyFilters(allPokemon));
+typeFilter.addEventListener('change', () => applyFilters(allPokemon));
+sortSelect.addEventListener('change', () => applyFilters(allPokemon));
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  saveThemePreference(document.body.classList.contains('dark-theme'));
+});
