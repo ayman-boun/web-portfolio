@@ -1,6 +1,6 @@
 import { fetchPokemonList, fetchPokemonTypes } from './api.js';
 import { renderPokemonList, populateTypeFilter } from './ui.js';
-import { saveThemePreference, loadThemePreference, toggleTheme } from './storage.js';
+import { saveThemePreference, loadThemePreference} from './storage.js';
 import { applyFilters } from './filters.js';
 
 const searchInput = document.getElementById('search');
