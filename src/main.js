@@ -2,6 +2,7 @@ import { fetchPokemonList, fetchPokemonTypes } from './api.js';
 import { renderPokemonList, populateTypeFilter } from './ui.js';
 import { saveThemePreference, loadThemePreference} from './storage.js';
 import { applyFilters } from './filters.js';
+import { getFavorites } from './storage.js';
 
 const searchInput = document.getElementById('search');
 const typeFilter = document.getElementById('filter-type');
@@ -29,4 +30,20 @@ sortSelect.addEventListener('change', () => applyFilters(allPokemon));
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
   saveThemePreference(document.body.classList.contains('dark-theme'));
+});
+
+const favButton = document.getElementById('show-favorites');
+let showingFavorites = false;
+
+favButton.addEventListener('click', () => {
+  showingFavorites = !showingFavorites;
+  if (showingFavorites) {
+    const favoriteIds = getFavorites();
+    const favoritePokemon = allPokemon.filter(p => favoriteIds.includes(p.id));
+    favButton.textContent = '🔙 Terug naar alle';
+    renderPokemonList(favoritePokemon);
+  } else {
+    favButton.textContent = '⭐ Favorieten';
+    renderPokemonList(allPokemon);
+  }
 });
