@@ -1,6 +1,6 @@
 import { fetchPokemonList, fetchPokemonTypes } from './api.js';
 import { renderPokemonList, populateTypeFilter } from './ui.js';
-import { saveThemePreference, loadThemePreference} from './storage.js';
+import { saveThemePreference, loadThemePreference } from './storage.js';
 import { applyFilters } from './filters.js';
 import { getFavorites } from './storage.js';
 
@@ -10,7 +10,6 @@ const sortSelect = document.getElementById('sort');
 const themeToggle = document.getElementById('toggle-theme');
 
 let allPokemon = [];
-
 
 document.addEventListener('DOMContentLoaded', async () => {
   document.body.classList.toggle('dark-theme', loadThemePreference());
@@ -22,8 +21,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   populateTypeFilter(types);
 });
 
+searchInput.addEventListener('input', () => {
+  const search = searchInput.value.trim();
+  if (search.length > 0 && search.length < 2) {
+    alert("Typ minstens 2 karakters in het zoekveld.");
+    return;
+  }
+  applyFilters(allPokemon);
+});
 
-searchInput.addEventListener('input', () => applyFilters(allPokemon));
 typeFilter.addEventListener('change', () => applyFilters(allPokemon));
 sortSelect.addEventListener('change', () => applyFilters(allPokemon));
 
