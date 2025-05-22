@@ -53,6 +53,13 @@ Het is een eenvoudige, maar efficiente tool voor fans die hun favoriete Pokémon
 - LocalStorage voor favorieten en thema
 
 
+
+##  Installatie & Gebruik
+
+git clone https://github.com/ayman-boun/web-portfolio.git
+
+
+
 ##  Mappenstructuur
 
 pokedex-explorer/
