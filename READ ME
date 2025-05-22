@@ -65,13 +65,13 @@ git clone https://github.com/ayman-boun/web-portfolio.git
 pokedex-explorer/
 ├── index.html
 ├── README.md
+├── style.css
 └── src/
     ├── main.js
     ├── api.js
     ├── ui.js
     ├── filters.js
     ├── storage.js
-    ├── style.css
 
 
 
