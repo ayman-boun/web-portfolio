@@ -1,0 +1,119 @@
+# Pokémon Explorer
+
+Een interactieve Single Page Web Applicatie gebouwd met Vite, Vanilla JavaScript en de [PokéAPI](https://pokeapi.co/).
+De app laat je Pokémon verkennen, zoeken, filteren en sorteren.
+Gebruikers kunnen op een snelle en gebruiksvriendelijke manier een verzameling Pokémon bekijken en structureren.
+
+
+##  Screenshots
+
+
+
+
+##  Beschrijving
+
+Deze applicatie maakt gebruik van de [PokéAPI](https://pokeapi.co/) om data over Pokémon op te halen. 
+De app toont een lijst van Pokémon en laat toe om deze te **zoeken op naam**, **filteren op type**, en **sorteren op naam en, gewicht** .
+Het is een eenvoudige, maar efficiente tool voor fans die hun favoriete Pokémon snel willen vinden.
+
+
+
+##  Functionaliteiten
+
+- Ophalen en tonen van Pokémon via externe API
+- **Zoekfunctie**: zoek Pokémon op naam
+- **Typefilter**: filter op Pokémon-type
+- **Sortering**: sorteer op naam, gewicht, hoogte of andere criteria
+- Responsief design voor desktop én mobiel
+- Thema wisselaar (licht/donker)
+- Favorieten markeren en opslaan
+
+
+
+##  Implementatie per technisch vereiste
+
+| Functionaliteit         | Bestand        | Lijn(en)   | Beschrijving |
+|-------------------------|----------------|------------|--------------|
+| API-data ophalen        | `api.js`       | ± lijn 10  | Fetch-oproep naar PokéAPI |
+| Zoeken op naam          | `filters.js`   | 11–16      | Zoekfunctie die input vergelijkt met namen |
+| Filteren op type        | `filters.js`   | 19–24      | Vult dropdown en filtert resultaten op type |
+| Sorteren van resultaten | `filters.js`   | 27–35      | Sorteeropties (bijv. op naam of gewicht) |
+| UI rendering            | `ui.js`        | N.v.t.     | Dynamisch tonen van Pokémon-kaarten |
+| Opslag favorieten       | `storage.js`   | N.v.t.     | Wordt later toegevoegd indien van toepassing |
+
+
+
+##  Technologieën
+
+- Vite (voor snelle development build)
+- HTML5 & CSS3
+- JavaScript (ES6 modules)
+- Fetch API (voor data ophalen)
+- PokéAPI - [https://pokeapi.co/](https://pokeapi.co/)
+- LocalStorage voor favorieten en thema
+
+
+
+##  Installatie & Gebruik
+
+git clone https://github.com/ayman-boun/web-portfolio.git
+
+
+
+##  Mappenstructuur
+
+pokedex-explorer/
+├── index.html
+├── README.md
+└── src/
+    ├── main.js
+    ├── api.js
+    ├── ui.js
+    ├── filters.js
+    ├── storage.js
+    ├── style.css
+
+
+
+## gebruikte bronnen 
+
+-PokéAPI - https://pokeapi.co/
+-Vite - https://vitejs.dev/
+-ChatGPT (AI-assistentie bij ontwikkeling en README-documentatie)
+-Documentatie over ES6 Modules, Fetch API en DOM-manipulatie
+
+
+##auteur
+
+Ayman Bounaanaa
+
+github: @ayman-boun
+contact: ayman.bounaanaa@student.ehb.be
+
+
+##licentie
+
+MIT License
+
+Copyright (c) 2025 Ayman Bounaanaa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
