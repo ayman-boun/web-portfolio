@@ -43,8 +43,7 @@ Het is een eenvoudige, maar efficiente tool voor fans die hun favoriete Pokémon
 | Zoeken op naam          | `filters.js`   | 11–16      | Zoekfunctie die input vergelijkt met namen |
 | Filteren op type        | `filters.js`   | 19–24      | Vult dropdown en filtert resultaten op type |
 | Sorteren van resultaten | `filters.js`   | 27–35      | Sorteeropties (bijv. op naam of gewicht) |
-| UI rendering            | `ui.js`        | N.v.t.     | Dynamisch tonen van Pokémon-kaarten |
-| Opslag favorieten       | `storage.js`   | N.v.t.     | Wordt later toegevoegd indien van toepassing |
+
 
 
 
