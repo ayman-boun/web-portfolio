@@ -6,7 +6,12 @@ Gebruikers kunnen op een snelle en gebruiksvriendelijke manier een verzameling P
 
 
 ##  Screenshots
-
+startpagina: /web1/public/startpagina.png
+donkere startpagina: /web1/public/donkere startpagina.png
+favorieten: /web1/public/favorieten.png
+filter types: /web1/public/types.png
+opzoek methode: /web1/public/opzoeken.png
+sorteren: /web1/public/sorteren.png
 
 
 
@@ -65,13 +70,13 @@ git clone https://github.com/ayman-boun/web-portfolio.git
 pokedex-explorer/
 ├── index.html
 ├── README.md
+├── style.css
 └── src/
     ├── main.js
     ├── api.js
     ├── ui.js
     ├── filters.js
     ├── storage.js
-    ├── style.css
 
 
 
@@ -79,10 +84,9 @@ pokedex-explorer/
 
 -PokéAPI - https://pokeapi.co/
 -Vite - https://vitejs.dev/
--ChatGPT (AI-assistentie bij ontwikkeling en README-documentatie)
 -Documentatie over ES6 Modules, Fetch API en DOM-manipulatie
-
-
+-ChatGPT (AI-assistentie bij ontwikkeling en README-documentatie): https://chatgpt.com/c/682dea72-6d80-800e-bcec-b41c921eaedd (of zie /web1/public/Schermopname 2025-05-22 215344.mp4)
+                                                                   https://chatgpt.com/c/682f7f19-f418-800e-9504-2c895ba7a797 (of zie /web1/public/Schermopname 2025-05-22 215433.mp4)
 ##auteur
 
 Ayman Bounaanaa
