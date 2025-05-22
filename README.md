@@ -60,8 +60,9 @@ Het is een eenvoudige, maar efficiente tool voor fans die hun favoriete Pokémon
 
 ##  Installatie & Gebruik
 
-git clone https://github.com/ayman-boun/web-portfolio.git
-
+1) Clone de repository of download de bestanden.,
+2) Open index.html in een moderne browser (Chrome, Firefox, Edge, Safari).,
+3) Je kunt direct aan de slag: zoeken, filteren, sorteren en favorieten beheren
 
 
 ##  Mappenstructuur
